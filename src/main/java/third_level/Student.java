@@ -22,4 +22,20 @@ public class Student {
                 ", grade=" + grade +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getStudyCourse() {
+        return studyCourse;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
 }
