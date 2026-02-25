@@ -3,24 +3,37 @@ package first_level;
 import java.util.Arrays;
 import java.util.List;
 
-import static first_level.StringReverse.SB;
-
 public class FirstLevelMain {
     public static void main (String[] args){
         List<String> words = Arrays.asList("hello", "how", "are", "you");
-        System.out.println(FirstLevelMethods.getWordsWithO(words));
-        System.out.println(FirstLevelMethods.getWordsWithOAnFiveLetters(words));
+
+        // Exercise 1
+        System.out.println("Result of getWordsWithO method: " + FirstLevelMethods.getWordsWithLetter(words));
+
+        // Exercise 2
+        System.out.println("Result of getWordsWithOAnFiveLetters method: " + FirstLevelMethods.getWordsWithLetterAndNumLetters(words));
+
+        // Exercise 3
         FirstLevelMethods.printStringList(words);
+
+        // Exercise 4
         FirstLevelMethods.referPrintStringList(words);
+
+        // Exercise 5
         PiValue piValue1 = () -> 3.1415;
-        System.out.println(piValue1.getPiValue());
+        System.out.println("getPiValue: " + piValue1.getPiValue());
 
         List<Object> objectList = Arrays.asList(3, "hello", 4, "Natalia", 15, "are", "you", 0, "ok");
-        System.out.println(FirstLevelMethods.sortElementsByDescendingLength(objectList));
-        System.out.println(FirstLevelMethods.sortElementsByAscendingLength(objectList));
 
-        StringReverse reverser1 = (str) -> SB.append(str).reverse().toString();
+        // Exercise 6
+        System.out.println("Result of sortElementsByAscendingLength method: " + FirstLevelMethods.sortElementsByAscendingLength(objectList));
 
-        System.out.println(reverser1.reverse("Hello"));
+        // Exercise 7
+        System.out.println("Result of sortElementsByDescendingLength method: " + FirstLevelMethods.sortElementsByDescendingLength(objectList));
+
+        // Exercise 8
+        StringReverse reverser1 = (str) -> new StringBuffer().append(str).reverse().toString();
+        System.out.println(reverser1.reverse("Hello world!"));
+        System.out.println(reverser1.reverse("How are you?"));
     }
 }
