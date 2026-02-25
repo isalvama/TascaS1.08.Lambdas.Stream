@@ -13,16 +13,6 @@ public class Student {
         this.grade = grade;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", studyCourse='" + studyCourse + '\'' +
-                ", grade=" + grade +
-                '}';
-    }
-
     public String getName() {
         return name;
     }
@@ -37,5 +27,15 @@ public class Student {
 
     public double getGrade() {
         return grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", studyCourse='" + studyCourse + '\'' +
+                ", grade=" + grade +
+                '}';
     }
 }

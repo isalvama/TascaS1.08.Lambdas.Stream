@@ -2,48 +2,47 @@ package third_level;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-Filtra la llista per tots els alumnes que el seu nom comença per ‘a’. Assigna a aquests alumnes a una altra llista i mostra per pantalla la nova llista (tot amb lambdes).
-Filtra i mostra per pantalla els alumnes que tenen una nota de 5 o superior.
-Filtra i mostra per pantalla els alumnes que tenen una nota de 5 o més, i que no són de PHP.
-Mostra tots els alumnes que fan JAVA i són majors d’edat.
- */
 
 public class StudentAnalyzer {
     private List<Student> studentList;
-    private List<Student> studentWithANameList;
+    private List<Student> studentWithInitialNameList;
+    private static final char CHAR_TO_FILTER = 'a';
+    private static final int MIN_GRADE = 5;
+    private static final String NAME_COURSE_JAVA = "java";
+    private static final String NAME_COURSE_PHP = "php";
+    private static final int ADULT_MIN_AGE = 18;
 
     public StudentAnalyzer(List<Student> studentList){
         this.studentList = studentList;
-        this.studentWithANameList = new ArrayList<>();
+        this.studentWithInitialNameList = new ArrayList<>();
     }
 
     public void printStudentNameAndAge(){
         this.studentList.forEach(sd -> System.out.println("name: " + sd.getName() + ", age: " + sd.getAge()));
     }
 
-    public void addStudentWithANameList(){
+    public void addStudentWithInitialNameList(){
         this.studentList.stream().filter(
-                sd -> sd.getName().toLowerCase().charAt(0) == 'a').
-                forEach(sd -> studentWithANameList.add(sd));
-        studentWithANameList.forEach(System.out::println);
+                sd -> sd.getName().toLowerCase().charAt(0) == CHAR_TO_FILTER).
+                forEach(sd -> studentWithInitialNameList.add(sd));
+        studentWithInitialNameList.forEach(System.out::println);
     }
 
-    public void printStudentWith5OrMoreGrade(){
+    public void printStudentsWithMinGrade(){
         this.studentList.stream().filter(
-                        sd -> sd.getGrade() >= 5).
+                        sd -> sd.getGrade() >= MIN_GRADE).
                 forEach(System.out::println);
     }
 
-    public void printStudentWith5OrMoreGradeNotPHP(){
+    public void printStudentsWithMinGradeNotPHP(){
         this.studentList.stream().filter(
-                        sd -> sd.getGrade() >= 5).filter(sd -> !sd.getStudyCourse().equalsIgnoreCase("php")).
+                        sd -> sd.getGrade() >= MIN_GRADE && !sd.getStudyCourse().equalsIgnoreCase(NAME_COURSE_PHP)).
                 forEach(System.out::println);
     }
 
-    public void printAdultAndJavaStudents(){
+    public void printAdultJavaStudents(){
         this.studentList.stream().filter(
-                        sd -> sd.getGrade() >= 5).filter(sd -> sd.getStudyCourse().equalsIgnoreCase("java")).
+                        sd -> sd.getAge() >= ADULT_MIN_AGE && sd.getStudyCourse().equalsIgnoreCase(NAME_COURSE_JAVA)).
                 forEach(System.out::println);
     }
 }

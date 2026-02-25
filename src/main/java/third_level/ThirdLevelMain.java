@@ -19,15 +19,15 @@ public class ThirdLevelMain {
         List<Student> studentList = Arrays.asList(student1, student2, student3, student4, student5, student6, student7, student8, student9, student10);
 
         StudentAnalyzer analyzer = new StudentAnalyzer(studentList);
-        System.out.println("printStudentNameAndAge method: ");
+        System.out.println("Result of printStudentNameAndAge method: ");
         analyzer.printStudentNameAndAge();
-        System.out.println("addStudentWithANameList method: ");
-        analyzer.addStudentWithANameList();
-        System.out.println("addStudentWith5OrMoreGrade method: ");
-        analyzer.printStudentWith5OrMoreGrade();
-        System.out.println("printStudentWith5OrMoreGradeNotPHP method: ");
-        analyzer.printStudentWith5OrMoreGradeNotPHP();
-        System.out.println("printAdultAndJavaStudents method: ");
-        analyzer.printAdultAndJavaStudents();
+        System.out.println("Result of addStudentWithInitialNameList method: ");
+        analyzer.addStudentWithInitialNameList();
+        System.out.println("Result of printStudentsWithMinGrade method: ");
+        analyzer.printStudentsWithMinGrade();
+        System.out.println("Result of printStudentsWithMinGradeNotPHP method: ");
+        analyzer.printStudentsWithMinGradeNotPHP();
+        System.out.println("Result of printAdultJavaStudents method: ");
+        analyzer.printAdultJavaStudents();
     }
 }
