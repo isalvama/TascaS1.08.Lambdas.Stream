@@ -14,18 +14,17 @@ public class FirstLevelMain {
         System.out.println("Result of getWordsWithOAnFiveLetters method: " + FirstLevelMethods.getWordsWithLetterAndNumLetters(words));
 
         // Exercise 3
-        FirstLevelMethods.printStringList(words);
+        List<String> months = Arrays.asList("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        FirstLevelMethods.printStringList(months);
 
         // Exercise 4
-        FirstLevelMethods.referPrintStringList(words);
+        FirstLevelMethods.referPrintStringList(months);
 
         // Exercise 5
-        PiValue piValue1 = () -> 3.1415;
-        System.out.println("getPiValue: " + piValue1.getPiValue());
-
-        List<Object> objectList = Arrays.asList(3, "hello", 4, "Natalia", 15, "are", "you", 0, "ok");
+        System.out.println("getPiValue: " + FirstLevelMethods.piValue.getPiValue());
 
         // Exercise 6
+        List<Object> objectList = Arrays.asList(3, "hello", 4, "Natalia", 15, "are", "you", 0, "ok");
         System.out.println("Result of sortElementsByAscendingLength method: " + FirstLevelMethods.sortElementsByAscendingLength(objectList));
 
         // Exercise 7

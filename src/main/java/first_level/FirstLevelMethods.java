@@ -6,7 +6,7 @@ import java.util.List;
 public class FirstLevelMethods {
     public static final String LETTER_TO_FILTER = "o";
     public static final int NUMBER_OF_LETTERS_TO_FILTER = 5;
-
+    public static final PiValue piValue = () -> 3.1415;
 
 
     public static List<String> getWordsWithLetter(List<String> wordList){
