@@ -11,7 +11,7 @@ public class FirstLevelMain {
         System.out.println("Result of getWordsWithO method: " + FirstLevelMethods.getWordsWithLetter(words));
 
         // Exercise 2
-        System.out.println("Result of getWordsWithOAnFiveLetters method: " + FirstLevelMethods.getWordsWithLetterAndNumLetters(words));
+        System.out.println("Result of getWordsWithOAnFiveLetters method: " + FirstLevelMethods.getWordsWithLetterAndSize(words));
 
         // Exercise 3
         List<String> months = Arrays.asList("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");

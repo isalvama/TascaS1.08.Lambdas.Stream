@@ -8,8 +8,6 @@ public class SecondLevelMain {
 
     public static void main (String[] args){
 
-
-
         // Exercise 1
         List<String> names = Arrays.asList("Laura", "Alba", "Joe", "Albert", "Darien", "Ana", "Aura");
         System.out.println("Result of getNamesStartingWithA method: " + SecondLevelMethods.getNamesStartingWithLetter(names));

@@ -13,7 +13,7 @@ public class FirstLevelMethods {
         return wordList.stream().filter(fr -> fr.contains(LETTER_TO_FILTER)).toList();
     }
 
-    public static List<String> getWordsWithLetterAndNumLetters(List<String> wordList){
+    public static List<String> getWordsWithLetterAndSize(List<String> wordList){
         return wordList.stream().filter(fr -> (fr.contains(LETTER_TO_FILTER)) && (fr.length() == NUMBER_OF_LETTERS_TO_FILTER)).toList();
     }
 
