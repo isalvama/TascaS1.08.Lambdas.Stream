@@ -1,4 +1,4 @@
-# Tasca S1 08: Lambdas & Streams
+# Sprint 1.8: Lambdas & Streams
 
 ## Description
 
